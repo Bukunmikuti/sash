@@ -287,7 +287,9 @@ body{
 	align-items: center;
 }
 .slider .single-slider {
-	height: 600px;
+  background: red;
+  background-image: linear-gradient(to right top, #94b7ea, #7597c3, #59789d, #3d5a78, #243e56, #2a3d5d, #353a62, #443663, #8b4074, #cd4e69, #f47549, #f6af1b);
+	height: 700px;
 	background-size: cover;
 	background-position: center;
 	background-repeat:no-repeat;
@@ -301,7 +303,7 @@ body{
 .slider .single-slider h1 {
 	color: #2C2D3F;
 	color: white;
-	font-size: 38px;
+	font-size: 48px; 
 	font-weight: 700;
 	margin: 0;
 	padding: 0;
@@ -388,16 +390,49 @@ body{
 /*=============================
 	Start Schedule CSS
 ===============================*/
+#get-store {
+  width: 100%;
+}
+
+#get-store .input {
+  width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 10px;
+  height: 60px;
+  font-size: 15px;
+}
+
+#get-store input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  text-align: left;
+  height: 40px;
+  font-size: 15px;
+  color: white;
+}
+
+#get-store .url {
+  font-weight: 500;
+}
+
+
+
+
 .schedule {
 	background: #fff;
 	margin: 0;
 	padding: 0;
-	height: 230px;
+	/*height: 230px;*/
 }
 .schedule .schedule-inner {
-	position: relative;
+	/*position: relative;
 	transform: translateY(-50%);
-	z-index:9;
+	z-index:9;*/
 }
 .schedule .single-schedule {
 	position: relative;
