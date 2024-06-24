@@ -1,5 +1,0 @@
-[[redirects]]
-from = "/demo"
-to = "https://creatours.netlify.app/"
-status = 200
-force = true
