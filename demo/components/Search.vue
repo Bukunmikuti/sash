@@ -1,0 +1,116 @@
+<template>
+  <div id="container">
+    <div id="search-header">
+      <h1>What do you want to get today?</h1>
+      <InputGroup id="input-group">
+        <inputText id="search-box" placeholder="I need some white sneakers" />
+        <!-- <Button id="search-btn" type="button" label="Search" icon="pi pi-search" /> -->
+        <Icon id="search-btn" name="iconamoon:search-bold" size="35px"></Icon>
+      </InputGroup>
+    </div>
+
+    <div id="search-result">
+      <div class="shopcard">
+        <img src="../assets/images/logo1.jpg" />
+        <div>
+          <h3>Zara Stores</h3>
+          <p>
+            Zara stores is a fashion-forward brand offering an exclusive range of stylish
+            clothing and accessories for modern women, combining elegance with
+            comfort.
+          </p>
+          <div class="tags">
+            <span>Clothing</span><span>Women dress</span><span>Fashion</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup lang="js">
+import 'primevue/resources/themes/aura-light-green/theme.css'
+</script>
+
+<style scoped lang="less">
+#container {
+  width: 100%;
+}
+
+#search-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+
+  #search-box {
+    width: 80%;
+    height: 70px;
+    max-width: 600px;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 1.8rem;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+
+  #input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 0 15px;
+  }
+
+  #search-btn {
+    box-sizing: content-box;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    background: #fbfffa;
+    border-radius: 100%;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #1b4710;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+}
+
+#search-result {
+  margin-top: 20px;
+  padding: 20px;
+
+  .shopcard {
+    max-width: 400px;
+    display: flex;
+    gap: 0 20px;
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    &:hover {
+        background: #ccc;
+    }
+    img {
+      width: 70px;
+      height: 70px;
+      border-radius: 100%;
+    }
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        word-wrap: break-word;
+        margin-top: 20px;
+        span {
+            padding: 4px 10px;
+            background: #ccc;
+            font-size: 1.4rem;
+            border-radius: 10px;
+            background: rgb(200, 237, 239);
+        }
+    }
+  }
+}
+</style>

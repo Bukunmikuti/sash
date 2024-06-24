@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["nuxt-primevue"],
+  modules: ["nuxt-primevue", "nuxt-icon"],
   css: ["@/assets/css/main.less"],
   vite: {
     css: {

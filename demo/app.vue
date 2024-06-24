@@ -1,6 +1,7 @@
 <template>
-  <div>
-  </div>
+  <Layout>
+    <Search></Search>
+  </Layout>
 </template>
 
 <style>
