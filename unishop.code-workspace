@@ -1,0 +1,16 @@
+{
+    "folders": [
+        {
+            "name": "Demo",
+            "path": "./demo"
+        },
+        {
+            "name": "components",
+            "path": "./demo/components",
+        },
+        {
+            "name": "Root",
+            "path": "./",
+        },
+    ]
+}
