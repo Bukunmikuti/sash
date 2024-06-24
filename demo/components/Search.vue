@@ -3,23 +3,69 @@
     <div id="search-header">
       <h1>What do you want to get today?</h1>
       <InputGroup id="input-group">
-        <inputText id="search-box" placeholder="I need some white sneakers" />
+        <inputText
+          id="search-box"
+          placeholder="I need some white sneakers"
+          v-model="searchparam"
+          @keyup.enter="powersearch"
+        />
         <!-- <Button id="search-btn" type="button" label="Search" icon="pi pi-search" /> -->
-        <Icon id="search-btn" name="iconamoon:search-bold" size="35px"></Icon>
+        <Icon
+          @click="powersearch"
+          id="search-btn"
+          name="iconamoon:search-bold"
+          size="35px"
+        ></Icon>
       </InputGroup>
     </div>
 
     <div id="search-result">
-      <ShopCard></ShopCard>
-      <ShopCard></ShopCard>
-      <ShopCard></ShopCard>
-      <ShopCard></ShopCard>
+      <ShopCard
+        v-for="store in allStores"
+        :name="store.name"
+        :desc="store.desc"
+        :tags="store.tags"
+        :logo="store.logo"
+        :key="store.name"
+        @click="toShop"
+      ></ShopCard>
     </div>
   </div>
 </template>
 
 <script setup lang="js">
 import 'primevue/resources/themes/aura-light-green/theme.css'
+//import { stores } from '#imports'
+import { searchindex, stores } from '#imports'
+
+const searchparam = ref(null)
+const allStores = ref()
+
+const powersearch = () => {
+  console.log(searchparam.value, searchindex)
+  let index;
+  for (const items of searchindex) {
+    for (const keywords of items.title) {
+      const key = keywords.toLowerCase()
+      if (searchparam.value.toLowerCase().includes(key)) {
+        index = items.index
+      }
+    }
+  }
+
+  if (index) {
+    let results = stores[index]
+    allStores.value = results
+    console.log(allStores.value)
+  } else {
+    console.log('EMPTY')
+  }
+}
+
+const toShop = () => {
+  const router = useRouter();
+  router.go('/zara')
+}
 </script>
 
 <style scoped lang="less">

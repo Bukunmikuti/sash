@@ -1,21 +1,39 @@
 <template>
   <div class="shopcard">
-    <img src="../assets/images/logo1.jpg" />
+    <img src="../assets/images/logo-placeholder.png" />
     <div>
-      <h3>Zara Stores</h3>
+      <h3>{{ props.name }}</h3>
       <p>
-        Zara stores is a fashion-forward brand offering an exclusive range of
-        stylish clothing and accessories for modern women, combining elegance
-        with comfort.
+        {{ props.desc }}
       </p>
-      <div class="tags">
-        <span>Clothing</span><span>Women dress</span><span>Fashion</span>
+      <div class="props.tags">
+        <span>{{ props.tags[0] }}</span
+        ><span>{{ props.tags[1] }}</span
+        ><span>{{ props.tags[2] }}</span>
       </div>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup lang="js">
+let props = defineProps(['name', 'desc', 'tags', 'logo'])
+/* defineProps({
+  name: String,
+  desc: String,
+  tags: [String],
+  logo: {
+    type: String,
+    required: false
+  },
+}) */
+
+const getLogo = computed(() => {
+  if (props.logo) {
+    return props.logo
+  }
+  return `logo-placeholder.png`
+})
+</script>
 
 <style scoped lang="less">
 .shopcard {
