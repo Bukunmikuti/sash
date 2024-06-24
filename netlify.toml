@@ -1,5 +1,5 @@
 [[redirects]]
 from = "/demo"
-to = ""
+to = "https://deploy-preview-1--unishopng.netlify.app/"
 status = 200
 force = true
