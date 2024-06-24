@@ -2,15 +2,15 @@
   <div id="container">
     <div id="sidebar">
       <div class="view" ref="feed" @click="toView('feed')">
-        <Icon name="fluent:feed-32-regular" size="50px" />
+        <Icon name="fluent:feed-32-regular" size="40px" />
         <p>Feed</p>
       </div>
       <div class="view" ref="search" @click="toView('search')">
-        <Icon name="mdi:store-search" size="50px" />
+        <Icon name="mdi:store-search" size="40px" />
         <p>Search</p>
       </div>
       <div class="view" ref="profile" @click="toView('profile')">
-        <Icon name="iconamoon:profile-circle" size="50px" />
+        <Icon name="iconamoon:profile-circle" size="40px" />
         <p>Profile</p>
       </div>
     </div>
@@ -49,7 +49,14 @@ let removeViews = () => {
   height: 100dvh;
   display: grid;
   grid-template-columns: auto 1fr;
+  position: fixed;
+
+  #main {
+    position: relative;
+    overflow-y: scroll;
+  }
 }
+
 #sidebar {
   width: 200px;
   height: 100%;
@@ -70,7 +77,7 @@ let removeViews = () => {
     cursor: pointer;
 
     p {
-      font-size: 2rem;
+      font-size: 1.6rem;
       padding: 5px 30px;
       margin-top: 7px;
       border-radius: 30px;

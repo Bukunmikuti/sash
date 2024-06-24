@@ -10,65 +10,10 @@
     </div>
 
     <div id="search-result">
-      <div class="shopcard">
-        <img src="../assets/images/logo1.jpg" />
-        <div>
-          <h3>Zara Stores</h3>
-          <p>
-            Zara stores is a fashion-forward brand offering an exclusive range
-            of stylish clothing and accessories for modern women, combining
-            elegance with comfort.
-          </p>
-          <div class="tags">
-            <span>Clothing</span><span>Women dress</span><span>Fashion</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="shopcard">
-        <img src="../assets/images/logo1.jpg" />
-        <div>
-          <h3>Zara Stores</h3>
-          <p>
-            Zara stores is a fashion-forward brand offering an exclusive range
-            of stylish clothing and accessories for modern women, combining
-            elegance with comfort.
-          </p>
-          <div class="tags">
-            <span>Clothing</span><span>Women dress</span><span>Fashion</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="shopcard">
-        <img src="../assets/images/logo1.jpg" />
-        <div>
-          <h3>Zara Stores</h3>
-          <p>
-            Zara stores is a fashion-forward brand offering an exclusive range
-            of stylish clothing and accessories for modern women, combining
-            elegance with comfort.
-          </p>
-          <div class="tags">
-            <span>Clothing</span><span>Women dress</span><span>Fashion</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="shopcard">
-        <img src="../assets/images/logo1.jpg" />
-        <div>
-          <h3>Zara Stores</h3>
-          <p>
-            Zara stores is a fashion-forward brand offering an exclusive range
-            of stylish clothing and accessories for modern women, combining
-            elegance with comfort.
-          </p>
-          <div class="tags">
-            <span>Clothing</span><span>Women dress</span><span>Fashion</span>
-          </div>
-        </div>
-      </div>
+      <ShopCard></ShopCard>
+      <ShopCard></ShopCard>
+      <ShopCard></ShopCard>
+      <ShopCard></ShopCard>
     </div>
   </div>
 </template>
@@ -126,8 +71,17 @@ import 'primevue/resources/themes/aura-light-green/theme.css'
   margin-top: 20px;
   padding: 20px;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto;
   gap: 30px;
+
+  @media @desktop {
+    grid-template-columns: auto auto;
+  }
+
+  @media @wide {
+    grid-template-columns: auto auto auto;
+  }
+
   .shopcard {
     max-width: 400px;
     display: flex;
